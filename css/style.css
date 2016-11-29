@@ -1,0 +1,48 @@
+*,
+*:before,
+*:after
+{
+    -webkit-user-select: none;
+}
+
+html,
+body,
+#map-canvas
+{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background: #fff;
+}
+
+a#menu-btn
+{
+    font-size: 1.8em;
+
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    right: 0;
+
+    text-decoration: none;
+
+    color: #666;
+}
+
+#opt-menu:not(.mm-menu)
+{
+    display: none;
+}
+
+/*#directionsPanel
+{
+    position: fixed;
+    right: 10px;
+
+    overflow-y: auto;
+
+    width: 30%;
+    height: auto;
+}
+*/

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Multi_Destination_Demo</title>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- google map -->
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDczmIg5nDRy_zpDRZIZ1MqgDINsCRLL8">
+    </script>
+    <!-- geolocation marker -->
+    <script type="text/javascript" src="lib/geolocationmarker-compiled.js"></script>
+
+    <!-- main script and stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- bootstrap stylesheet and js -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- mmenu stylesheet and js -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.widescreen.css" media="all and (min-width: 900px)" />
+    <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+</head>
+
+<body onload="initialize()">
+
+<div class="header">
+    <a id="menu-btn" class="Fixed glyphicon glyphicon-menu-hamburger" href="#opt-menu"></a>
+</div>
+
+<div id="map-canvas"></div>
+
+
+<nav id="opt-menu">
+    <ul>
+        <li class="Selected"><span>Map Options</span>
+            <ul class="Vertical">
+                <li><span>Optimize</span><input type="checkbox" id="optimize" class="Check" checked /></li>
+                <li><span>Avoid Highways</span><input type="checkbox" id="highways" class="Check" /></li>
+                <li><span>Avoid Tolls</span><input type="checkbox" id="tolls" class="Check" /></li>
+                <li><span>Start At My Location</span><input type="checkbox" id="userLocation" class="Check" checked /></li>
+            </ul>
+        </li>
+        <li><a href="#" onclick="calcRoute()">Get directions!</a></li>
+        <li><a href="#" onclick="reset()">Reset the map</a></li>
+        <li><a href="#dir-menu"><span>Dir Menu</span></a>
+            <ul>
+                <li class="mm-multiline"><span id="directionsPanel"></span></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+</body>
+
+</html>
